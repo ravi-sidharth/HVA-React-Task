@@ -23,6 +23,7 @@ function App() {
       {name:"Roll", price:49, description:"It's cold tea like coffee"},
     ]
   
+    const [count,setCount] =useState(0)
 
   return (
      <> 
@@ -36,7 +37,9 @@ function App() {
       </button>
       </div>
 
-      {Menu.map(ele=><MenuItem Menu={ele}/>)}
+      <div>Count: {count} </div>
+      <button className='px-2 py-1 bg-blue-600' onClick={()=>setCount(prevState=>prevState+1)}>Increment</button>
+
      </>
      
      
